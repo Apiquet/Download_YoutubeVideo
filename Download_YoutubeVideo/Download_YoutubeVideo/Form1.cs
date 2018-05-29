@@ -25,7 +25,8 @@ namespace Download_YoutubeVideo
 
         private void Download_Click(object sender, EventArgs e)
         {
-            
+            IEnumerable<VideoInfo> _video = DownloadUrlResolver.GetDownloadUrls(txtAddress.Text);
+            VideoInfo _myVideo = _video.First(vid => vid.VideoType == VideoType.Mp4);
         }
     }
 }
