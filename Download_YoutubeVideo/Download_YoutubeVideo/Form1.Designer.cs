@@ -30,7 +30,7 @@
         {
             this.Download = new System.Windows.Forms.Button();
             this.Address = new System.Windows.Forms.Label();
-            this.textAddress = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Download
@@ -41,6 +41,7 @@
             this.Download.TabIndex = 0;
             this.Download.Text = "Download";
             this.Download.UseVisualStyleBackColor = true;
+            this.Download.Click += new System.EventHandler(this.Download_Click);
             // 
             // Address
             // 
@@ -51,23 +52,24 @@
             this.Address.TabIndex = 1;
             this.Address.Text = "Address:";
             // 
-            // textAddress
+            // txtAddress
             // 
-            this.textAddress.Location = new System.Drawing.Point(98, 51);
-            this.textAddress.Name = "textAddress";
-            this.textAddress.Size = new System.Drawing.Size(335, 20);
-            this.textAddress.TabIndex = 2;
+            this.txtAddress.Location = new System.Drawing.Point(98, 51);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(335, 20);
+            this.txtAddress.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 162);
-            this.Controls.Add(this.textAddress);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.Address);
             this.Controls.Add(this.Download);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,7 +79,7 @@
 
         private System.Windows.Forms.Button Download;
         private System.Windows.Forms.Label Address;
-        private System.Windows.Forms.TextBox textAddress;
+        private System.Windows.Forms.TextBox txtAddress;
     }
 }
 
