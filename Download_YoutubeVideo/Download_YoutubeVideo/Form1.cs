@@ -27,6 +27,7 @@ namespace Download_YoutubeVideo
         {
             IEnumerable<VideoInfo> _video = DownloadUrlResolver.GetDownloadUrls(txtAddress.Text);
             VideoInfo _myVideo = _video.First(vid => vid.VideoType == VideoType.Mp4);
+            if(_myVideo.RequiresDecryption) DownloadUrlResolver.DecryptDownloadUrl(_myVideo);
         }
     }
 }
